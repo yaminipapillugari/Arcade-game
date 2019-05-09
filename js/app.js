@@ -19,11 +19,6 @@ class Player{
 
     }
 }
-// var Player = function(x, y) {
-//   this.x = x;
-//   this.y = y;
-//   this.sprite = 'images/char-boy.png';
-// };
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -80,12 +75,12 @@ Player.prototype.handleInput = function(k) {
   } else if (k == "up" && this.y > 0) {
     this.y -= 84;
   }
-  if (this.y < 60) {
-    setTimeout(function() {
-      this.x = 202;
-      this.y = 410;
-    }, 900);
-  }
+    if (this.y < 60) {
+      setTimeout(function() {
+        player.x = 202;
+        player.y = 410;
+      }, 900);
+    }
 
 }
 
