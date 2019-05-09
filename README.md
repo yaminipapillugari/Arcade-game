@@ -1,8 +1,6 @@
-# Classic Arcade Game Clone Project
-
 # classic Arcade game
 
-#Aim:The main aim of this project is to design an arcade game.
+## Aim:The main aim of this project is to design an arcade game.
 
 clone the repository which was provided by the Udacity. some files and folders are provided.
 They are:
@@ -12,7 +10,7 @@ They are:
   4\. index.html
   5\. README.md
 
-## How to run the Game?
+### How to run the Game?
 
 modified the file app.js
 
@@ -23,7 +21,7 @@ modified the file app.js
 -   allEnemies array is created for the count of enemies.
 -   In the update function of enemy a condition is given so that if once all enemies will pass then they should again come from the initial position.
 
-## How to play the Game?
+### How to play the Game?
 
 -   At first a player will be set to the initial position.
 -   if we press up arrow player will move upside ,if we press right arrow it will move to the right side, if we press the down arrow it will move to the bottom and if press left arrow it will move to the left side. These keys will be handled by the handleInput method.
@@ -31,5 +29,5 @@ modified the file app.js
 -   In the same way if the player reaches to the water again it will comes to the initial position.
 -   so without colliding any enemy player should reach the water.
 
-# Conclusion-
+## Conclusion-
    From this project I learn JavaScript object oriented programming features and also how to create many instances of similar functioning objects.
