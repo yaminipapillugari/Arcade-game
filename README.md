@@ -1,4 +1,4 @@
-# classic Arcade game
+# Classic Arcade game
 
 ## Aim:The main aim of this project is to design an arcade game.
 
