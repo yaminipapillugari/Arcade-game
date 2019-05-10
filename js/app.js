@@ -1,24 +1,19 @@
-"use strict";
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
   this.x = x;
   this.y = y;
   this.speed = speed;
-  // Variables applied to each of our instances go here,
-  // we've provided one for you to get started
-
-  // The image/sprite for our enemies, this uses
-  // a helper we've provided to easily load images
   this.sprite = 'images/enemy-bug.png';
 };
-class Player{
-    constructor(x,y) {
-      this.x=x;
-      this.y=y;
-      this.sprite = 'images/char-boy.png';
 
-    }
-}
+// Player Constructor
+class Player {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.sprite = 'images/char-boy.png';
+  }
+};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -39,7 +34,6 @@ Enemy.prototype.update = function(dt) {
     player.y = 400;
   }
 };
-// Player.prototype.update = function(dt) {};
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
@@ -66,22 +60,36 @@ for (var i in enemy) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 Player.prototype.handleInput = function(k) {
-  if (k == "left" && this.x > 0) {
-    this.x -= 101;
-  } else if (k == "right" && this.x < 400) {
-    this.x += 101;
-  } else if (k == "down" && this.y < 400) {
-    this.y += 84;
-  } else if (k == "up" && this.y > 0) {
-    this.y -= 84;
-  }
-    if (this.y < 60) {
-      setTimeout(function() {
-        player.x = 202;
-        player.y = 410;
-      }, 900);
-    }
+  switch (k) {
+    case 'left':
+      if (this.x > 0) {
+        this.x -= 101;
+      };
+      break;
+    case 'right':
+      if (this.x < 400) {
+        this.x += 101;
+      };
+      break;
 
+    case 'down':
+      if (this.y < 400) {
+        this.y += 84;
+      }
+      break;
+
+    case 'up':
+      if (this.y > 0) {
+        this.y -= 84;
+      }
+  }
+
+  if (this.y < 60) {
+    setTimeout(() => {
+      this.x = 202;
+      this.y = 410;
+    }, 200);
+  }
 }
 
 // This listens for key presses and sends the keys to your
